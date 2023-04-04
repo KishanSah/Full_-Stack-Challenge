@@ -1,0 +1,30 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif; 
+}
+.Nav-div{
+  margin: 0px;
+}
+.nav-ul li{
+  margin: 0px;
+  display: inline-block;
+  padding: 10px;
+}
+.nav-ul{
+  padding: 10px;
+  margin: 0px;
+  background-color: rgb(92, 141, 141);
+  text-align: right;
+}
+.nav-ul li a{
+  color:antiquewhite;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.Nav-p{
+  text-align: left;
+  color: antiquewhite;
+}
+

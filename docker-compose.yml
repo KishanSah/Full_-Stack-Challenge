@@ -1,0 +1,31 @@
+version: '3'
+services:
+  mongodb:
+    image: "mongo"
+    volumes:
+      - data:/data/db 
+  frontend:
+    build: ./dashboard
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./dashboard/src:/dashboard/src
+    environment:
+      - WATCHPACK_POLLING=true
+    stdin_open: true
+    tty: true  
+    depends_on:
+      - backend
+  backend:
+    build: ./api
+    ports: 
+      - "4000:4000"
+    volumes:
+      - ./api:/index
+      - /api/node_modules
+    depends_on:
+      - mongodb
+volumes:
+  data:
+  logs:
+  
